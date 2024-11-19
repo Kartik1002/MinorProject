@@ -1,0 +1,626 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+:root {
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+    --bg-color: #9D37F1;
+    --bg-color2: #223FF3;
+}
+
+
+
+/*Header*/
+nav {
+    padding: 10px;
+}
+
+
+.logo {
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.logo-img {
+    margin-right: 1rem;
+    width: 4%;
+}
+
+.nav-bar,
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+}
+
+.links li,
+.dropdown li {
+    list-style: none;
+}
+
+.links a {
+    color: black;
+    list-style: none;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.dropdown a {
+    color: white;
+    list-style: none;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: #223FF3;
+}
+
+.links a:hover {
+    color: #223FF3;
+    font-weight: 700;
+}
+#login-link
+{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 5px 25px;
+}
+.action-btn,
+.d-action-btn {
+    /* background-color: orange; */
+    color: black;
+    /* border-radius: 20px; */
+    /* padding: 0.18rem 0.58rem; */
+    border: none;
+    transition: scale 0.3s ease-in-out;
+}
+
+.toggle-btn {
+    color: black;
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.action-btn:hover,
+.d-action-btn:hover {
+    scale: 0.9;
+}
+
+.action-btn:active,
+.d-action-btn:active {
+    scale: 1.05;
+}
+
+/*Dropdown*/
+.dropdown {
+    background: linear-gradient(126deg, rgba(168, 54, 241, 1) 0%, rgba(16, 64, 244, 1) 100%);
+    ;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    position: absolute;
+    top: 3rem;
+    left: 67%;
+    overflow: hidden;
+    display: none;
+    height: 0;
+    transition: height width .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.dropdown li {
+    padding: 10px;
+}
+
+.open {
+    height: 45%;
+}
+
+
+/* hero-section */
+.info {
+    margin-left: 8%;
+    margin-top: 15%;
+    width: 40%;
+}
+
+.info h1 {
+    font-size: 50px;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.right-way {
+    color: rgba(16, 64, 244, 1);
+}
+
+.info p {
+    color: var(--secondary-color);
+    line-height: 22px;
+}
+
+.info a {
+    background: linear-gradient(126deg, rgba(168, 54, 241, 1) 0%, rgba(16, 64, 244, 1) 100%);
+    padding: 15px 32px;
+    text-decoration: none;
+    color: var(--primary-color);
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+
+.img-box {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.img-box img {
+    height: 80%;
+    position: relative;
+    left: 50%;
+    bottom: 35px;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.img-box:hover .main-img {
+    bottom: 5%;
+}
+
+/* roadmap Section */
+#roadmap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    margin: 3rem 0rem;
+}
+#roadmap h1,
+#roadmap h1 span {
+    font-size: 3rem;
+}
+.roadmap-container {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+}
+
+.card {
+    height: 42vh;
+    width: 23%;
+    background-color: white;
+    padding: 13px;
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid grey;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card .image img {
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.capsules {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.capsules span {
+    border: 1px solid grey;
+    border-radius: 1rem;
+    color: grey;
+    font-size: 0.8em;
+    padding: 8px;
+    width: 63%;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card .content {
+    margin: 15px 10px;
+}
+.card .content h4
+{
+    font-size: 19px;
+}
+.card .content p {
+    margin-top: 5px;
+    font-size: 15px;
+    color: lightslategray;
+    text-align: justify;
+}
+
+.card .button {
+    background-color: rgb(234, 221, 248);
+    border-radius: 20px;
+    width: 48%;
+    margin: 6px;
+    padding: 10px 9px;
+    font-weight: bold;
+    font-size: 14px;
+    color:black;
+    text-align: center;
+    cursor: pointer;
+    
+}
+.card .button a
+{
+    text-decoration: none;
+}
+
+.card .button:hover {
+    background-color: rgb(192, 156, 238);
+}
+
+.capsules span:hover {
+    background-color:rgb(241 242 244);
+    color: black;
+}
+
+/* contact section */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+
+
+.section-heading {
+    width: auto;
+    padding: 20px 10px 10px;
+    font-weight: 400;
+}
+
+.section-heading span {
+    font-size: 40px;
+    color: rgba(16, 64, 244, 1);
+    display: inline-block;
+    padding-top: 10px;
+    margin-right: 0.5rem;
+}
+
+.mb50px {
+    margin-bottom: 50px;
+}
+
+#contact {
+    background-image: linear-gradient(50deg, #2857a4 0%, #403066 74%);
+    color: white;
+    padding-bottom: 40px;
+}
+
+#contact h1,
+#contact h1 span {
+    color: white;
+    font-size: 3rem;
+}
+
+
+
+#contact-container {
+    display: flex;
+}
+
+#my-details-container {
+    width: 35%;
+    margin-left: 6%;
+    line-height: 2rem;
+}
+
+#my-details-container h3 {
+    color: white;
+    font-weight: 550;
+    font-size: 1.8rem;
+}
+
+#contact-form-container {
+    width: 50%;
+    margin-left: 3%;
+}
+
+#my-details-container p {
+    color: #d9dcdd;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.my-details-info-container {
+    margin-bottom: 10px;
+    color: #d9dcdd;
+    font-size: 1rem;
+}
+
+.my-details-info-container span {
+    margin-left: 0.4rem;
+}
+
+.my-details-info-container i {
+    color: white;
+}
+
+.my-details-icon {
+    width: 1rem;
+    height: 1rem;
+    vertical-align: bottom;
+    margin-right: 0.5rem;
+}
+
+
+#contact-form input,
+textarea {
+    max-width: 90%;
+    margin: 15px;
+    padding: 4px 10px;
+    border: 0px solid transparent;
+    border-bottom: 2px solid white;
+    color: #d9dcdd;
+    background: transparent;
+    width: 90%;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.sub-btn {
+    background: transparent;
+    font-size: 1rem;
+    border: 2px solid white;
+    margin-top: 5%;
+    margin-left: 35%;
+    border-radius: 2px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.046875em;
+    line-height: 1;
+    padding: 0.8em 0.8em 0.78em;
+    text-transform: uppercase;
+}
+
+#contact-form button:hover {
+    background: white;
+    color: #13386fe0;
+}
+
+#contact .social-icons li a i {
+    font-size: 1.2rem;
+    margin: 40px 10px 10px;
+    padding: 10px 14px 20px 10px;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* social icons */
+
+.text-center {
+    text-align: center;
+}
+
+
+.horizontal-list {
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.horizontal-list li {
+    display: inline-block;
+    margin: 0px 8px 8px 0px;
+}
+
+.no-list-style {
+    list-style: none;
+}
+
+.no-list-style li {
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+.no-list-style li a {
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+
+#name-social-container {
+    margin-top: 20vh;
+}
+
+#my-name {
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.social-icons li a i {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 50%;
+}
+
+.social-icons li a i:hover {
+    box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+}
+
+
+
+/* media Querries */
+@media screen and (max-width:992px) {
+
+    .logo
+    {
+        font-size: 1.4rem !important;
+    }
+    .links,
+    .action-btn {
+        display: none;
+    }
+
+    .toggle-btn,
+    .dropdown {
+        display: block;
+        
+    }
+    .open
+    {
+        z-index: 1;
+        height: fit-content;
+        text-align: center;
+        padding: 5px;
+    }
+    .d-action-btn {
+        display: block;
+        padding: 0 4rem;
+    }
+    .roadmap-container
+    {
+        flex-direction: column;
+    }
+    .card
+    {
+        width:37%;
+    }
+    .img-box img
+    {
+        height: 76% !important;
+        left: 66% !important;
+    }
+    .info h1
+    {
+        font-size: 44px !important;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .dropdown {
+        left: 2rem;
+        width: unset;
+    }
+    .open
+    {
+        height: fit-content;
+        padding: 15px;
+        margin-top: 1rem;
+    }
+    .card
+    {
+        width:80% !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    #contact-form {
+        margin-left: 0%;
+    }
+
+    #contact-container {
+        flex-wrap: wrap;
+    }
+
+    #contact-form-container {
+        width: 80%;
+        margin: 10%;
+    }
+
+    #contact-container {
+        justify-content: center;
+    }
+
+    #contact-form button[type="submit"] {
+        margin-left: 30%;
+    }
+
+    #my-details-container {
+        width: 60% !important;
+    }
+
+    .info a {
+        padding: 10px !important;
+        font-size: 0.8rem !important;
+    }
+
+    .info h1 {
+        font-size: 25px !important;
+    }
+
+    .img-box img {
+        height: 50% !important;
+        ;
+        left: 80% !important;
+    }
+
+    .sub-btn {
+        margin-left: 25% !important;
+        font-size: 0.8rem !important;
+    }
+
+    #my-details-container h3 {
+        font-size: 1.4rem !important;
+    }
+
+    #my-details-container p {
+        font-size: 1rem !important;
+    }
+    
+    #roadmap h1,
+    #roadmap h1 span,
+    #contact h1,
+    #contact h1 span {
+        font-size: 2rem !important;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .logo img {
+        width: 9% !important;
+    }
+}
+

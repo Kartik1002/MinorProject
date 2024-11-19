@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrepEasy</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a3b7d69df6.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- navbar -->
+  <header>
+    <nav>
+      <div class="nav-bar">
+        <div class="logo">
+          <img src="assets/images/logo.png" class="logo-img">
+          PrepEasy
+        </div>
+        <ul class="links">
+          <li><a href="">Home</a></li>
+          <li><a href="#roadmap">Roadmaps</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="login-form/index.html" id="login-link">Login</a></li>
+        </ul>
+        <div class="toggle-btn">
+          <i class="fa-solid fa-bars" style="color:black;"></i>
+        </div>
+      </div>
+      <div class="dropdown">
+        <li><a href="">Home</a></li>
+        <li><a href="#roadmap">Roadmaps</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="login-form/index.html" id="login-link">Login</a></li>
+      </div>
+    </nav>
+  </header>
+
+  <!-- hero-section -->
+  <section class="hero" id="hero">
+    <div class="info">
+      <h1>Prepare for Semester Exams in <span class="right-way">Organised</span> Way</h1>
+      <a href="#roadmap">Go To Roadmaps</a>
+    </div>
+    <div class="img-box">
+      <img src="assets/images/boy.png" class="main-img">
+    </div>
+  </section>
+
+  <section id="roadmap">
+    <h1 class="section-heading mb50px">
+      <span>
+        <i class="fa-solid fa-map"></i>
+      </span>
+      <span>Roadmaps </span>
+    </h1>
+
+    <div class="roadmap-container" >
+      <div class="card">
+        <div class="content">
+          <h4>C Programming</h2>
+            <p>Embark on your C programming journey with this comprehensive roadmap, guiding you from the basics to advanced concepts step by step</p>
+        </div>
+        <div class="capsules">
+          <span>Basic Programming</span>
+          <span>Pointer Manipulation</span>
+          <span>Memory Management</span>
+        </div>
+        <div class="button">
+          <a href="roadmap/C Programming/index.html" target="_blank" class="view-roadmap">View</a>
+        </div>
+      </div>
+      <div class="card">
+
+        <div class="content">
+          <h4>DBMS</h4>
+          <p>Unlock the secrets of data management and discover the power behind every smart system with DBMS!</p>
+        </div>
+        <div class="capsules">
+          <span>SQL Querying</span>
+          <span>Normalisation Techniques</span>
+          <span>ER Modelling</span>
+        </div>
+        <div class="button">
+          <a href="roadmap/DBMS/index.html" target="_blank" class="view-roadmap">View</a>
+        </div>
+      </div>
+      <div class="card">
+
+        <div class="content">
+          <h4>Operating System</h4>
+          <p>Navigate the evolution of computing with our clear and concise roadmap to operating systems</p>
+        </div>
+        <div class="capsules">
+          <span>Process Management</span>
+          <span>File System</span>
+          <span>Deadlocks</span>
+        </div>
+        <div class="button">
+          <a href="roadmap/OS/index.html" target="_blank" class="view-roadmap">View</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- contact-section -->
+  <section id="contact">
+    <h1 class="section-heading mb50px">
+      <span>
+        <i class="far fa-address-card"></i>
+      </span>
+      <span> Contact </span>
+    </h1>
+    <div id="contact-container">
+
+      <div id="contact-form-container">
+        <form id="contact-form">
+          <input id="input-name" name="name" type="text" placeholder="Your Name">
+          <input id="input-email" name="input-email" type="text" required placeholder="Your Email">
+          <textarea id="input-message" name="input-message" rows="2" cols=40 placeholder="Message"></textarea>
+          <button class="sub-btn" type="submit">SEND MESSAGE</button>
+        </form>
+      </div>
+      <div id="my-details-container">
+
+        <h3> Get In touch </h3>
+        <p>Have questions or feedback? I would love to hear from you! Reach out to me anytime</p>
+        <div class="my-details-info-container">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Delhi, India</span>
+        </div>
+        <div class="my-details-info-container">
+          <i class="fas fa-mobile-alt"></i>
+          <span>9999999999</span>
+        </div>
+        <div class="my-details-info-container">
+          <i class="far fa-envelope"></i>
+          <span>myemail@gmail.com</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- social icons -->
+    <div class="text-center social-icons">
+
+      <ul class="no-list-style horizontal-list">
+
+        <li>
+          <a href="" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="" target="_blank">
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+
+        <li>
+          <a hr" target="_blank">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <script type="module" src="firebaseauth.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
