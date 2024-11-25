@@ -1,1 +1,1 @@
-# MinorProject
+# PrepEasy: Computer Science Roadmaps
